@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <title>Compound Interest Calculator (360days)</title>
+    <link rel="stylesheet" href="css_comp_interest_calci.css">
+</head>
+
+<body>
+    <div class="comp-intere-cal-bg-container p-4">
+        <h1 class="comp-intere-cal-heading text-center mb-4">Compound Interest Calculator (360 days)</h1>
+        <div class="comp-intere-cal-container bg-light pt-4 pb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-7">
+                        <p class="input-label">Enter Amount</p>
+                        <input class="user-input" id="enterAmountInput" type="text" />
+
+                        <p class="input-label">Interest rate(rupee/100)</p>
+                        <input class="user-input" id="interestRateInput" type="text" />
+
+                        <p class="input-label">Enter Start Date</p>
+                        <input class="user-input" id="enterStartDateInput" type="date" />
+
+                        <p class="input-label">Enter End Date</p>
+                        <input class="user-input" id="enterEndDateInput" type="date" />
+
+                        <div class="text-center mt-4">
+                            <button id="applyButton" class="btn btn-primary" onclick="applyFunc()">
+                                Calculate
+                            </button>
+                        </div>
+
+                        <p class="text-center">____________________________</p>
+
+                        <p class="input-label">Total days</p>
+                        <p class="output-val" id="totalDays"></p>
+
+                        <p class="input-label">Interest Amount</p>
+                        <p class="output-val" id="interesAmount" type="text"></p>
+
+                        <p class="input-label">Total Amount </p>
+                        <p class="output-val" id="totaAmount" type="text"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <P class="my-name-para text-right">Baddigam Sandeep Reddy</P>
+    </div>
+
+    <script src="js_comp_interest_calci.js"></script>
+</body>
+
+</html>

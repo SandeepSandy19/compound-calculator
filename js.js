@@ -86,3 +86,76 @@ function applyFunc() {
     interesAmountElement.textContent = interestAmount;
     totaAmountElement.textContent = total_amount.toFixed(2);
 }
+
+let enterAmountInputElement1 = document.getElementById("enterAmountInput1");
+let interestRateInputElement1 = document.getElementById("interestRateInput1");
+let enterStartDateInputElement1 = document.getElementById("enterStartDateInput1");
+let enterEndDateInputElement1 = document.getElementById("enterEndDateInput1");
+let totalDaysElement1 = document.getElementById("totalDays1");
+let interesAmountElement1 = document.getElementById("interesAmount1");
+let totaAmountElement1 = document.getElementById("totaAmount1")
+
+
+function applyFunc1() {
+
+    let enterAmountInputvalue1 = parseInt(enterAmountInputElement1.value);
+    let interestRateInputvalue1 = parseFloat(interestRateInputElement1.value);
+    let enterStartDateInputvalue1 = enterStartDateInputElement1.value;
+    let enterEndDateInputvalue1 = enterEndDateInputElement1.value;
+
+    let start_day1 = parseInt(enterStartDateInputvalue1.slice(8, ));
+    let start_month1 = parseInt(enterStartDateInputvalue1.slice(5, 7));
+    let start_year1 = parseInt(enterStartDateInputvalue1.slice(0, 4));
+    let end_day1 = parseInt(enterEndDateInputvalue1.slice(8, ));
+    let end_month1 = parseInt(enterEndDateInputvalue1.slice(5, 7));
+    let end_year1 = parseInt(enterEndDateInputvalue1.slice(0, 4));
+
+    let dur_year1 = end_year1 - start_year1;
+    let dur_month1 = end_month1 - start_month1;
+    let dur_day1 = end_day1 - start_day1;
+
+    let duration_year1 = dur_year1;
+    let duration_month1 = dur_month1;
+    let duration_day1 = dur_day1;
+
+    if (dur_year1 >= 0) {
+        duration_year1 = dur_year1;
+    } else {
+        duration_year1 = 0;
+    }
+
+    if (dur_month1 >= 0) {
+        duration_month1 = dur_month1;
+    } else if (dur_month1 < 0) {
+        duration_month1 = 12 + duration_month1;
+        duration_year1 = duration_year1 - 1;
+    } else {
+        duration_month1 = 0;
+    }
+
+    if (dur_day1 >= 0) {
+        duration_day1 = dur_day1;
+    } else if (dur_day1 < 0) {
+        duration_day1 = 30 + duration_day1;
+        duration_month1 = duration_month1 - 1;
+    } else {
+        duration_day1 = 0;
+    }
+
+    let duration_year_days1 = duration_year1 * 360;
+    let duration_month_days1 = duration_month1 * 30;
+    let duration_day_days1 = duration_day1;
+    let duration_month_and_day_days1 = duration_month_days1 + duration_day_days1;
+
+    let total_days1 = duration_year_days1 + duration_month_and_day_days1;
+
+
+    let interes_amount1 = (enterAmountInputvalue1) * (total_days1) * (1 / 30) * (interestRateInputvalue1 / 100);
+    let interest_amount1 = parseFloat(interes_amount1.toFixed(2));
+    let total_amount1 = (enterAmountInputvalue1 + interest_amount1);
+
+
+    totalDaysElement1.textContent = total_days1;
+    interesAmountElement1.textContent = interest_amount1;
+    totaAmountElement1.textContent = total_amount1;
+}

@@ -26,7 +26,7 @@ function applyFunc() {
 
     }
 
-    let enterAmountInputvalue = parseInt(enterAmountInputElement.value);
+    let enterAmountInputvalue = parseFloat(enterAmountInputElement.value);
     let interestRateInputvalue = parseFloat(interestRateInputElement.value);
     let enterStartDateInputvalue = enterStartDateInputElement.value;
     let enterEndDateInputvalue = enterEndDateInputElement.value;
@@ -98,7 +98,7 @@ let totaAmountElement1 = document.getElementById("totaAmount1")
 
 function applyFunc1() {
 
-    let enterAmountInputvalue1 = parseInt(enterAmountInputElement1.value);
+    let enterAmountInputvalue1 = parseFloat(enterAmountInputElement1.value);
     let interestRateInputvalue1 = parseFloat(interestRateInputElement1.value);
     let enterStartDateInputvalue1 = enterStartDateInputElement1.value;
     let enterEndDateInputvalue1 = enterEndDateInputElement1.value;
